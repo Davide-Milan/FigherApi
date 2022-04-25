@@ -4,8 +4,15 @@ const conn = require('./db/db')
 
 const app = express()
 
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
+app.get('/', (req, res) => { 
+  console.log(conn.query(`select * from arnia where id='1' `)[0])  
+  conn.end()
+  res.send('<h1>Hello Worldaa!</h1>') 
+})
+
+app.post('/', (req, res) => {
+  res.send('<h1>Hello Worldaaaaa!</h1>')
+  console.log('post')
 })
 
 const PORT = 3001

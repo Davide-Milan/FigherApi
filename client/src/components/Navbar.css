@@ -1,0 +1,16 @@
+.nav{
+    margin-left: 2em;
+    flex-grow: 1;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 2em;
+}
+
+.nav-link a:hover,
+.nav-link a:focus{
+    color: var(--txt-hover)
+}

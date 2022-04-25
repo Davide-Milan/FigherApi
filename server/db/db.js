@@ -17,12 +17,4 @@ conn.connect((err) => {
     }
 })
 
-conn.end((err) => {
-    if(!err){
-        console.log('Disconnected!!!');
-    } else {
-        console.log('Disconnection failed...')
-    }
-})
-
 module.exports = conn
