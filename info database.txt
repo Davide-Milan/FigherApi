@@ -1,0 +1,25 @@
+arnia{
+    id
+    luogo
+    ultima visita
+    note
+    regina:{
+        colore
+        anno di nascita
+    }
+    telai{
+        quanti/quali hanno scorte (=miele)
+        quanti/quali hanno covata (=nascere)
+    }
+    melario{
+        (si o no se c'è)
+        numero telai con miele
+        numero telai da costruire
+    }
+}
+
+
+
+storico{
+    da completare con telai e melari
+}

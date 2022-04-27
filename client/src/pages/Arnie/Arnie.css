@@ -1,17 +1,18 @@
 .arnie{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 2em;
     list-style-type: none;
-    margin-top: 1em;
     width: 80%;
     margin-inline: auto;
 }
 
 .arnia__tile{    
     background-color: var(--bg-secondary);
-    width: 5em;
+    width: 100%;
     aspect-ratio: 1 / 1;
+    border-radius: .5em;
 }
 
 .arnia__link{
@@ -31,33 +32,76 @@
     padding: 0 2em;
 }
 
+.data__title{
+    color: rgb(206, 69, 69);
+    text-align: center;
+    font-size: 2em;
+}
+
+.data__fieldset{
+    margin: 2em 0;
+    padding: 0 2em .5em;
+}
+
 .data__list{
     list-style-type: none;
+    border-radius: .5em;
+    padding: 1.5em 2em;
+    flex-basis: 100%;
+    min-width: fit-content;
+    box-shadow: 0px 2px 4px 1px rgba(107, 105, 105, 0.26);
 }
+.dark .data__list{
+    background-color: var(--bg-secondary);
+    box-shadow: none;
+}
+.data__list--flex{
+    display: flex;
+    align-items: stretch;
+    gap: 2em;
+    overflow-x: scroll;
+    scroll-snap-align: start;
+    scroll-snap-type: x;
+    padding: 2em .2em;
+}
+.dark .data__list__title{
+    color: var(--txt-secondary)
+}
+
 
 .data__item{
     display: flex;
     align-items: baseline;    
     gap: 1em;
     margin: 1em 0 0;
+    flex-basis: 100%;
+}
+.data__item:last-child{
+    margin-bottom: 1em;
 }
 
 .data__type{
-    flex-grow: 1;
-    flex-basis: 20%;
+    min-width: 7em;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 .data__type::after{
     content:':';    
 }
-
 .data{
-    flex-grow: 1;
-    flex-basis: 70%;
+    margin-left: auto;
+}
+.dark .data__type,
+.dark .data{
+    color: var(--txt-secondary);
 }
 
-
 .data.input{
-    background-color: var(--bg-secondary);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: .5em;
+    width: 100%;
+}
+.dark.data.input{
     color: var(--txt-secondary);
 }
 
@@ -65,9 +109,13 @@
     display: flex;
     gap: 2em;
     justify-content: center;
-    margin-top: 1em;
+    padding: 2em 0 2em;
 }
 .data__button{
     background-color: var(--bg-secondary);
     color: var(--txt-secondary);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 1em;
+    font-size: 1.5em;
 }

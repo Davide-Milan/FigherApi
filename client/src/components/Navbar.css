@@ -10,6 +10,9 @@
     gap: 2em;
 }
 
+.nav-link a{
+    font-size: 1.25em;
+}
 .nav-link a:hover,
 .nav-link a:focus{
     color: var(--txt-hover)

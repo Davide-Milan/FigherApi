@@ -1,13 +1,15 @@
 
 const express = require('express')
+const { connect } = require('./db/db')
 const conn = require('./db/db')
 
 const app = express()
 
 app.get('/', (req, res) => { 
-  console.log(conn.query(`select * from arnia where id='1' `)[0])  
-  conn.end()
-  res.send('<h1>Hello Worldaa!</h1>') 
+  const sql = `select * from arnia`
+  conn.query(sql, (err, result) => {
+    if(err) throw err
+  }) 
 })
 
 app.post('/', (req, res) => {

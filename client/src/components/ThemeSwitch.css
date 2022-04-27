@@ -1,5 +1,5 @@
 .theme-switch-button{
-  background-color: transparent;
+  background-color: var(--bg-secondary);
   outline: none;
   box-shadow: none;
   border: none;
@@ -17,14 +17,5 @@
   transition-property: all;
   transition-timing-function: ease-in-out;
   transition-duration: .25s;
-  color: var(--txt-primary);
-}
-
-.theme-switch-button:hover,
-.theme-switch-button:focus{
-  background-color: var(--bg-secondary);
-}
-.theme-switch-button:hover .theme-switch,
-.theme-switch-button:focus .theme-switch{
   color: var(--txt-secondary);
 }

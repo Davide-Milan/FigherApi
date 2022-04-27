@@ -32,11 +32,10 @@ function App() {
     <div className={`${theme} App`}>
         <Router>
         <header className='App-header'>
-          <div className="App-header__logo-title__wrapper">
+          <Link to="/" className="App-header__logo-title__wrapper">
             <img src={logo} alt='logo image' className='App-header__logo'/>
             <h1 className='App-header__title'>FigherApi</h1>
-          </div>
-          <Navbar />
+          </Link>
           <ThemeSwitch
             className='switch'
             theme={theme}
@@ -44,8 +43,12 @@ function App() {
           />
         </header>        
         <Routes>
-            <Route exact path='/' element={<Home />} />
+            {/* <Route exact path='/' element={<Home />} />
             <Route path='/arnie' element={<ElencoArnie />}>
+              <Route path='' element={<Arnie />}/>
+              <Route path=':param' element={<Arnia />}/>
+            </Route> */}    
+            <Route path='/' element={<ElencoArnie />}>
               <Route path='' element={<Arnie />}/>
               <Route path=':param' element={<Arnia />}/>
             </Route>
