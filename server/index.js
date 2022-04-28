@@ -8,8 +8,10 @@ const app = express()
 app.get('/', (req, res) => { 
   const sql = `select * from arnia`
   conn.query(sql, (err, result) => {
-    if(err) throw err
-  }) 
+    if(err) throw err    
+    console.log(result[0])
+    res.send(`${JSON.stringify(result[0])}`) 
+  })
 })
 
 app.post('/', (req, res) => {

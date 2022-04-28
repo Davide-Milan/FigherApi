@@ -7,6 +7,9 @@ const Arnia = () => {
     const [editing, setEditing] = React.useState(false)
     const [valori, setValori] = React.useState(['kfnhgkfnb', '2000-03-16', '2', 'asdsad'])
 
+
+    fetch('http://localhost:3001/')
+
     React.useEffect(() => {
         // Fetch post using the parm
     }, [param]);

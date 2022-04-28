@@ -50,7 +50,7 @@ function App() {
             </Route> */}    
             <Route path='/' element={<ElencoArnie />}>
               <Route path='' element={<Arnie />}/>
-              <Route path=':param' element={<Arnia />}/>
+              <Route path='/arnia/:param' element={<Arnia />}/>
             </Route>
         </Routes>
         </Router>

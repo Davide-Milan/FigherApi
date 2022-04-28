@@ -64,10 +64,11 @@
     scroll-snap-type: x;
     padding: 2em .2em;
 }
-.dark .data__list__title{
-    color: var(--txt-secondary)
+.data__list__title{
+    color: rgb(206, 69, 69);
+    font-size: 1.25em;
+    font-weight: bold;
 }
-
 
 .data__item{
     display: flex;
