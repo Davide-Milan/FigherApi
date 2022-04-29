@@ -13,7 +13,8 @@
   */
   --txt-primary: #f5f5f5;
   --txt-secondary: #282c34;
-  --txt-accent: #e06c6c;
+  --txt-accent: #ce4545;
+  --txt-accent2: #e06c6c;
   --txt-hover: #d4c600;
   --bg-primary: #282c34;
   --bg-secondary: #ececec;
@@ -25,7 +26,8 @@
   */
   --txt-primary: #282c34;
   --txt-secondary: #f5f5f5;
-  --txt-accent: #c50243;
+  --txt-accent: #ce4545;
+  --txt-accent2: #c50243;
   --txt-hover: #bb5a00;
   --bg-primary: #ececec;
   --bg-secondary: #282c34;
@@ -68,19 +70,4 @@
 
 .App-header__title{
 color: var(--txt-secondary);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(206, 69, 69);
-  border-radius: 10px;
-}
-
-html{ /* for Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: var(--fucsia-accent);
 }

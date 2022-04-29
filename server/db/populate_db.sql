@@ -9,7 +9,7 @@ INSERT INTO regina VALUES
 
 INSERT INTO arnia (luogo, nota, trattamento, regina_id)
 VALUES
-    ('istrana', 'test', 'trattamento A', 1),
+    ('istrana', '', 'trattamento A', 1),
     ('sala', 'test2', 'trattamento B', 2),
     ('pezzan', 'test3', 'trattamento C', 3),
     ('ospedaletto', 'test4', 'trattamento D', 4),

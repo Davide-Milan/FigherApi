@@ -5,14 +5,24 @@ import './Arnie.css'
 const Arnia = () => {
     let{param} = useParams()
     const [editing, setEditing] = React.useState(false)
-    const [valori, setValori] = React.useState(['kfnhgkfnb', '2000-03-16', '2', 'asdsad'])
+    const [valori, setValori] = React.useState([])
 
 
-    fetch('http://localhost:3001/')
+    // var x = fetch('http://localhost:3001/').then(response => response.json())
+    // .then(data => console.log(data));
+    // console.log('render')
+    
+    // React.useEffect(() => {
+    //     // Fetch post using the parm
+    // }, [param]);
 
     React.useEffect(() => {
-        // Fetch post using the parm
-    }, [param]);
+        fetch(`http://192.168.1.4:3001/arnia/${param}`).then(response => response.json())
+        .then(data => {
+            console.log(data)
+            return setValori(data)}
+        )
+    },[])
 
     const editMode = () =>{
         setEditing(!editing)
@@ -53,7 +63,7 @@ const Arnia = () => {
             {editing 
             ?
             <form action='/arnie' className="data__list__wrapper">
-                <ul className="data__list">
+                <ul className="data__list tile">
                     <fieldset className='data__fieldset'>
                         <legend className='data__title'>Dati Arnia</legend>
                         <li className='data__item'>
@@ -123,7 +133,7 @@ const Arnia = () => {
             :
             
             <div className='data__list__wrapper'>
-                <ul className="data__list">
+                <ul className="data__list tile">
                     <h2 className='data__title'>Dati Arnia</h2>
                     <li className='data__item'>
                         <h3 className="data__type">Luogo</h3>
@@ -146,7 +156,7 @@ const Arnia = () => {
                 <br/><br/><br/>
                 <ul className="data__list--flex">
                     
-                        <ul className="data__list">
+                        <ul className="data__list tile">
                             <h2 className='data__title'>Regina</h2>
                             <li className='data__item'>
                                 <h3 className="data__type">Colore</h3>
@@ -160,7 +170,7 @@ const Arnia = () => {
                             
 
                     
-                        <ul className="data__list">
+                        <ul className="data__list tile">
                             <h2 className='data__title'>Telai</h2>
                             <li className='data__item'>
                                 <h3 className="data__type">Scorta</h3>
@@ -176,7 +186,7 @@ const Arnia = () => {
 
                 <br/><br/><br/>
                 <ul className="data__list--flex">
-                    <ul className="data__list">
+                    <ul className="data__list tile">
                         <h2 className="data__title">Melario 1</h2>
                         <li className='data__item'>
                             <h3 className='data__type'>Miele</h3>
@@ -192,7 +202,7 @@ const Arnia = () => {
                         </li>
                     </ul>
 
-                    <ul className="data__list">
+                    <ul className="data__list tile">
                         <h2 className="data__title">Melario 2</h2>
                         <li className='data__item'>
                             <h3 className='data__type'>Miele</h3>
@@ -208,7 +218,7 @@ const Arnia = () => {
                         </li>
                     </ul>
 
-                    <ul className="data__list">
+                    <ul className="data__list tile">
                         <h2 className="data__title">Melario 3</h2>
                         <li className='data__item'>
                             <h3 className='data__type'>Miele</h3>

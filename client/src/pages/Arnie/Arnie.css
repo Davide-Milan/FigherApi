@@ -1,39 +1,92 @@
+.tile{
+    border-radius: .5em;
+    box-shadow: 0px 2px 4px 1px rgba(107, 105, 105, 0.26);
+}
+.dark .tile{
+    background-color: var(--bg-secondary);
+    box-shadow: none;
+}
+
+
+/*--------ARNIE-------*/
+
 .arnie{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     gap: 2em;
     list-style-type: none;
     width: 80%;
     margin-inline: auto;
+    align-items: stretch;
 }
 
 .arnia__tile{    
-    background-color: var(--bg-secondary);
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: .5em;
+    flex-grow: 1;    
+    max-width: min(30em, 100%);
+    min-height: 15em;
+}
+.nota.arnia__tile{
+    background-color: var(--txt-accent);    
+}
+.light .nota.arnia__tile{
+    box-shadow: 0px 2px 4px 1px rgba(221, 124, 124, 0.986);
 }
 
-.arnia__link{
+.arnia__tile__link{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    padding: 2em;
+    text-decoration: none;
+}
+
+.arnia__tile__title{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.dark .arnia__tile__title{
+    color: var(--txt-secondary);
+}
+.arnia__tile__info__list{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
-.arnia__link__title{
-    color: var(--txt-secondary);
-    text-decoration: none;
+.arnia__tile__info{
+    display: flex;
+    align-items: baseline;
 }
+.dark .arnia__tile__info *{
+    color: var(--txt-secondary);    
+}
+.arnia__tile__info__title::after{
+    content: ':';
+    margin-right: 1ch;
+}
+.arnia__tile__info:last-child{
+    margin-top: auto;
+}
+
+.arnia__tile__info__content{
+    text-transform: capitalize;
+}
+
+
+
+
+
+/*--------ARNIA-------*/
 
 .data__list__wrapper{
     padding: 0 2em;
 }
 
 .data__title{
-    color: rgb(206, 69, 69);
+    color: var(--txt-accent);
     text-align: center;
     font-size: 2em;
 }
@@ -45,16 +98,11 @@
 
 .data__list{
     list-style-type: none;
-    border-radius: .5em;
     padding: 1.5em 2em;
     flex-basis: 100%;
     min-width: fit-content;
-    box-shadow: 0px 2px 4px 1px rgba(107, 105, 105, 0.26);
 }
-.dark .data__list{
-    background-color: var(--bg-secondary);
-    box-shadow: none;
-}
+
 .data__list--flex{
     display: flex;
     align-items: stretch;
@@ -65,7 +113,7 @@
     padding: 2em .2em;
 }
 .data__list__title{
-    color: rgb(206, 69, 69);
+    color: var(--txt-accent);
     font-size: 1.25em;
     font-weight: bold;
 }
