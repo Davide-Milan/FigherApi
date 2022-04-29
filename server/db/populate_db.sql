@@ -74,6 +74,7 @@ VALUES
 INSERT INTO melario (arnia_id, numero_telai_miele, numero_telai_vuoti, numero_telai_da_costruire)
 VALUES
     (1, 3, 2, 4),
+    (1, 2, 3, 4),
     (2, 2, 6, 1),
     (3, 1, 3, 5),
     (4, 4, 3, 2)

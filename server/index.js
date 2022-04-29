@@ -17,16 +17,18 @@ app.get('/', (req, res) => {
 
   conn.query(sql, (err, result) => {
     if(err) throw err    
-    res.json(result) 
+    res.json(result)
   })
 })
 
 app.get('/arnia/:id', (req, res) => { 
-  const sql = `SELECT * FROM arnia 
+  const sql = `SELECT *, count(tipo) as tipo FROM arnia 
                 JOIN regina on (arnia.regina_id = regina.id)
                 JOIN melario on (arnia.id = melario.arnia_id)
                 JOIN telaio on (arnia.id = telaio.arnia_id)
-                WHERE arnia.id = ${req.params.id}`
+                WHERE arnia.id = ${req.params.id}
+                GROUP BY tipo;
+                `
 
   console.log(req.params.id)
   conn.query(sql, (err, result) => {
